@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <title>Home</title>
+
+  <script src="navigation.js" defer></script>
+</head>
+<body class="home">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+      <div >
+        <img src="assets/shared/logo.svg" alt="space tourism logo" class="logo">
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-nav-bar"><span class="sr-only" aria-expanded="false">Menu</span></button>
+      <nav>
+        <ul id="primary-nav-bar" data-visible="false" class="flex primary-nav-bar underline-selected">
+            <li class="active underline-indicators"><a class="uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00 </span>home</a></li>
+            <li class="underline-indicators"><a class="uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01 </span>destination</a>
+            <li class="underline-indicators"><a class="uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02 </span>crew</a>
+            <li class="underline-indicators"><a class="uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">02 </span>technology</a>
+        </ul>
+    </nav>
+  </header> 
+  <main id="main" class="grid-container grid-container--home">
+    <div class="flow content--home"> 
+      <h1 class="text-accent ff-sans-cond fs-500 uppercase letter-spacing-2">So, you want to travel to
+      <span class="fs-900 text-white ff-serif d-block">Space</span></h1>
+      <p class="home-content text-accent">Let’s face it; if you want to go to space, you might as well genuinely go to 
+      outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      because we’ll give you a truly out of this world experience!</p>
+    </div>
+    <div class=" button--home">
+      <!-- explore Button  -->
+      <a href="destination.html" class="large-button fs-600 bg-white text-dark ff-serif uppercase">Explore</a> 
+    </div>
+    </main>
+  </div>
+</body>
+</html>
