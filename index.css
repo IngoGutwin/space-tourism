@@ -578,12 +578,16 @@ body {
     display: flex;
     flex-direction: column;
     outline: 3px solid firebrick;
-    
+
 }
 .number-selected {
     margin: auto;
 }
-
+.technology-description {
+    outline: forestgreen 3px solid;
+        min-height: 10rem;
+    }
+    
 /* ----- layout queries ----- */
 
 @media (min-width: 35em) {
