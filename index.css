@@ -578,6 +578,7 @@ body {
     display: flex;
     flex-direction: column;
     outline: 3px solid firebrick;
+    
 }
 .number-selected {
     margin: auto;
