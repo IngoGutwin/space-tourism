@@ -555,7 +555,6 @@ body {
 }
 .crew-description {
     min-height: 7.5rem;
-    outline: 3px solid firebrick;
 }
 /*----- layout technology ----- */
 .grid-container--technology {
@@ -708,10 +707,7 @@ body {
         grid-area: title;
     }
     .grid-container--crew > picture {
-
-        border: 3px solid firebrick;
         max-width: 90%;
-        /* min-height: 36rem; */
         align-self: end;
         justify-self: end;
     }
