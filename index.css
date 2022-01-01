@@ -632,12 +632,12 @@ body {
   flex-direction: column;
   border-top: 1px solid hsl(var(--clr-white) / 0.1);
   padding-top: 1rem;
-  margin-block: 1rem;
+  margin: 1rem 0;
 }
 .destination-distance {
   flex-flow: column wrap;
   width: 100%;
-  margin-block-end: 1rem;
+  margin-bottom: 1rem;
 }
 .destination-distance h3,
 p {
