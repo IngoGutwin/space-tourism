@@ -272,7 +272,7 @@ p {
     height: auto;
 } */
 .large-button {
-  /* margin-bottom: -3rem; */
+  margin-bottom: 3rem;
   position: relative;
   z-index: 1;
   display: -ms-inline-grid;
@@ -321,6 +321,9 @@ p {
   padding: min(20rem, 15vh) 2rem;
   margin: 0;
   background: hsl(var(--clr-dark) / 0.95);
+}
+.primary-nav-bar:first-child {
+  padding-top: 12rem;
 }
 @supports (-webkit-backdrop-filter: blur(2rem)) {
   .primary-nav-bar {
@@ -605,6 +608,7 @@ body {
 }
 .grid-container--home > .button--home {
   grid-area: button;
+  --flow-space: 0.2rem;
 }
 .grid-container--home h1 {
   white-space: nowrap;
@@ -702,6 +706,7 @@ p {
 }
 .grid-container--technology > .number-selected {
   grid-area: slider;
+  margin: 2rem auto auto auto;
 }
 .grid-container--technology > .technology-info {
   grid-area: content;
@@ -713,9 +718,6 @@ p {
 .content-technology {
   display: flex;
   flex-direction: column;
-}
-.number-selected {
-  margin: auto;
 }
 .technology-description {
   min-height: 10rem;
@@ -762,7 +764,6 @@ p {
     margin: 3rem 0;
   }
   /*---- technology ---- */
-
   .number-indicators {
     width: 4rem;
     height: 4rem;
@@ -900,8 +901,9 @@ p {
     display: block;
   }
 
-  .number-selected {
+  .grid-container--technology > .number-selected {
     flex-direction: column;
+    margin: 0;
   }
   .number-indicators {
     width: 5rem;
