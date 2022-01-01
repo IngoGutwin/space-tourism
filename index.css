@@ -320,9 +320,15 @@ p {
   list-style: none;
   padding: min(20rem, 15vh) 2rem;
   margin: 0;
-  background: hsl(var(--clr-dark) / 0.7);
+  background: hsl(var(--clr-dark) / 0.95);
 }
-
+@supports (-webkit-backdrop-filter: blur(2rem)) {
+  .primary-nav-bar {
+    background-color: hsl(var(--clr-white) / 0.04);
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+  }
+}
 @supports (backdrop-filter: blur(2rem)) {
   .primary-nav-bar {
     background: hsl(var(--clr-white) / 0.04);
