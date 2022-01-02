@@ -425,9 +425,10 @@ p {
   li {
     white-space: nowrap;
   }
-    .primary-nav-bar:first-child {
-      padding-top: 0;
-    }
+  .primary-nav-bar:first-child {
+    padding-top: 0;
+  }
+}
 @media (min-width: 35em) and (max-width: 47.999em) {
   .underline-indicators span {
     display: none;
@@ -587,9 +588,8 @@ body {
 /*  Layout */
 /*----------------------------*/
 .grid-container {
-  display: -ms-grid;
-  display: grid;
   text-align: center;
+  display: grid;
   place-items: center;
   padding: 0 1rem;
 }
