@@ -416,7 +416,7 @@ p {
     align-items: center;
   }
   .primary-nav-bar {
-    padding: 0;
+    /* padding: 0; */
     padding: 0 clamp(3rem, 5vh, 4rem);
   }
   .mobile-nav-toggle {
@@ -425,7 +425,9 @@ p {
   li {
     white-space: nowrap;
   }
-}
+    .primary-nav-bar:first-child {
+      padding-top: 0;
+    }
 @media (min-width: 35em) and (max-width: 47.999em) {
   .underline-indicators span {
     display: none;
