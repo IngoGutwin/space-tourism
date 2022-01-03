@@ -377,34 +377,56 @@ p {
     margin: 0;
     flex-direction: column;
     transform: translateX(100%);
-    transition: transform 500ms ease-in;
+    transition: transform 500ms ease-in-out;
   }
   .primary-nav-bar[data-visible="true"] {
     transform: translateX(0%);
     right: 0;
   }
   .mobile-nav-toggle {
-    display: block;
+    width: 2rem;
+    height: 1.5rem;
     position: absolute;
     z-index: 2000;
-    right: 1rem;
+    right: 1.5rem;
     top: 2rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle {
+    width: 1.5rem;
+    height: 3px;
+    background: hsl(var(--clr-light));
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+  .toggle::before,
+  .toggle::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 3px;
+    border-radius: 5px;
+    background: hsl(var(--clr-light));
+    transition: all 0.5s ease-in-out;
+  }
+  .toggle::before {
+    transform: translateY(-0.7rem);
+  }
+  .toggle::after {
+    transform: translateY(0.7rem);
+  }
+  .mobile-nav-toggle[aria-expanded="true"] .toggle {
+    transform: translateX(-7rem);
     background: transparent;
-    background-image: url(./assets/shared/icon-hamburger.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 2rem;
-    height: 2rem;
-    /* aspect-ratio: 1; */
-    border: 0;
   }
-  @supports (aspect-ratio: 1) {
-    .mobiel-nav-toggle {
-      aspect-ratio: 1;
-    }
+  .mobile-nav-toggle[aria-expanded="true"] .toggle::before {
+    transform: rotate(45deg) translate(5rem, -5rem);
   }
-  .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url(./assets/shared/icon-close.svg);
+  .mobile-nav-toggle[aria-expanded="true"] .toggle::after {
+    transform: rotate(-45deg) translate(5rem, 5rem);
   }
   .primary-nav-bar a {
     font-size: var(--fs-300);
