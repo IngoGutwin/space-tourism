@@ -371,7 +371,6 @@ p {
     right: -35%;
     width: 65%;
     height: 100vh;
-    /* inset: 0 0 0 35%; */
     list-style: none;
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
@@ -708,14 +707,14 @@ p {
 .grid-container--crew > .crew-info {
   grid-area: content;
 }
-.crew-info {
+/* .crew-info {
   margin-bottom: 3rem;
-}
-.crew-info h2 {
+} */
+.crew-info > h2 {
   opacity: 0.5;
 }
 .crew-description {
-  min-height: 7.5rem;
+  min-height: 6.5rem;
 }
 /*----- layout technology ----- */
 .grid-container--technology {
@@ -787,11 +786,12 @@ p {
   .crew-info {
     --flow-space: 2rem;
   }
+  .grid-container--crew > .crew-info {
+    grid-area: content;
+    align-self: end;
+  }
   .grid-container--crew h1 {
     margin: 1rem 0;
-  }
-  .dot-selected {
-    margin: 3rem 0;
   }
   /*---- technology ---- */
   .number-indicators {
@@ -799,7 +799,7 @@ p {
     height: 4rem;
   }
 }
-@media (min-width: 63rem) and (min-height: 64rem) and (orientation: portrait) {
+@media (min-width: 63rem) and (min-height: 81rem) and (orientation: portrait) {
   .grid-container--crew {
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 27rem) minmax(
         1rem,
@@ -809,6 +809,19 @@ p {
       ". title title ."
       ". content content ."
       ". dots image .";
+  }
+  .grid-container--crew > .numbered-title {
+    grid-area: title;
+  }
+  .grid-container--crew > .crew-info {
+    grid-area: content;
+  }
+  .grid-container--crew > .dot-selected {
+    grid-area: dots;
+    margin: 0;
+  }
+  .grid-container--crew > picture {
+    grid-area: image;
   }
 }
 @media (min-width: 54rem) and (max-height: 68rem) {
@@ -885,8 +898,9 @@ p {
     justify-self: end;
   }
   .dot-selected {
+    margin: 0;
+    --flow-space: 0.5rem;
     justify-self: start;
-    align-self: start;
   }
   .crew-info {
     justify-self: start;
